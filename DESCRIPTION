@@ -1,0 +1,12 @@
+Package: NEONDiversity
+Type: Package
+Title: What the package does (short line)
+Version: 1.0
+Date: 2013-12-09
+Author: Edmund Hart
+Maintainer: Edmund Hart <thart@neoninc.org>
+Description: More about what it does (maybe more than one line)
+License: MIT
+Roxygen: list(wrap = FALSE)
+Collate:
+    'h_pie.R'
