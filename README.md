@@ -2,7 +2,7 @@
 
 ### About
 
-This package will contain all alogrithms used calculate NEON Data products relating to biodiversity
+This package will contain all algorithms used to calculate NEON Data products relating to biodiversity
 
 ### Quickstart
 
