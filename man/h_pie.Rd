@@ -21,7 +21,10 @@
   The equation used is \eqn{PIE = \begin{bmatrix}
   \frac{N}{N-1} \end{bmatrix} \begin{bmatrix} 1 -
   \sum_{i}^{N}\begin{pmatrix} \frac{N_i}{N} \end{pmatrix}^2
-  \end{bmatrix}}{ PIE = \begin{bmatrix} \frac{N}{N-1} }
+  \end{bmatrix}}{ PIE = \begin{bmatrix} \frac{N}{N-1}
+  \end{bmatrix} \begin{bmatrix} 1 -
+  \sum_{i}^{N}\begin{pmatrix} \frac{N_i}{N} \end{pmatrix}^2
+  \end{bmatrix} }
 }
 \examples{
 \dontrun{

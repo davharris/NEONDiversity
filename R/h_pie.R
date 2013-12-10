@@ -1,7 +1,7 @@
 #' Calculate Hurlbert's PIE 
 #' @description Calculate Hurlbert's PIE (Probability of an Interspecific Encounter)
 #' @param sp_list a vector of species abundances, or a site (rows) x species (columns) matrix
-#' @details This will calculate Hurlbert's PIE after Hurlbert 1971.  The equation used is \eqn{PIE = \begin{bmatrix} \frac{N}{N-1} \end{bmatrix} \begin{bmatrix} 1 - \sum_{i}^{N}\begin{pmatrix} \frac{N_i}{N} \end{pmatrix}^2 \end{bmatrix}}{ PIE = \begin{bmatrix} \frac{N}{N-1} }
+#' @details This will calculate Hurlbert's PIE after Hurlbert 1971.  The equation used is \eqn{PIE = \begin{bmatrix} \frac{N}{N-1} \end{bmatrix} \begin{bmatrix} 1 - \sum_{i}^{N}\begin{pmatrix} \frac{N_i}{N} \end{pmatrix}^2 \end{bmatrix}}{ PIE = \begin{bmatrix} \frac{N}{N-1} \end{bmatrix} \begin{bmatrix} 1 - \sum_{i}^{N}\begin{pmatrix} \frac{N_i}{N} \end{pmatrix}^2 \end{bmatrix} }
 #' @return a scalar (for a vector of input) or vector (for matrix input) of PIE values
 #' @examples \dontrun{
 #' ## Generate some data
