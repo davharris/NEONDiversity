@@ -25,8 +25,10 @@
 
 
 indiv_rare <- function(smat,extrap = NULL){
+  ### Handle interpolation cases for vectors and matrices
+  
   if(is.vector(smat)){
-    return(NEONDiversity:::vec_rare(smat))
+   interp <- NEONDiversity:::vec_rare(smat)
   }
   
   if(is.data.frame(smat)){
@@ -38,9 +40,14 @@ indiv_rare <- function(smat,extrap = NULL){
     for(i in 1:dim(smat)[1]){
       out[[i]] <- NEONDiversity:::vec_rare(as.vector(smat[i,]))
     }
-      return(out)
+      out_interp <- out
     
   }
+  
+  ### Extrapolation
+  
+  
+  
   
 }
 
@@ -103,5 +110,13 @@ return(sum(out,na.rm=T))
 }
 
 
-
+extrap <- function(vec,m){
+  f0 <- chao1(vec)
+  S <- length(vec)
+  n <- sum(vec)
+  
+  
+  
+  
+}
 

@@ -5,7 +5,6 @@
 #' @param f2 a scalar or vector of the frequency of doubletons see details
 #' @details The function can take either a site by species matrix or alternatively the parameters f1, f2 and S.  Those are calculated from the matrix / vector, but don't need to be if that is all the information you have
 #' @return a vector of estimates unobserved species which can be added to S for an estimate of the total number of species
-#' @import plyr
 #' @examples \dontrun{
 #' data(costaRicaTrees)
 #' chao1(new_growth)

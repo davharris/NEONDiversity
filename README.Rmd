@@ -14,7 +14,9 @@ Currently there are two algorithms implemented
 
 __Depends__
 
-`devtools`
+* `devtools`
+
+__Installation__
 
 ```coffee
 library(devtools)
