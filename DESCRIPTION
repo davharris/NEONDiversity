@@ -10,3 +10,4 @@ License: MIT
 Roxygen: list(wrap = FALSE)
 Collate:
     'h_pie.R'
+    'indiv_rare.R'

@@ -24,21 +24,16 @@ install_github("NEONDiversity")
 
 
 __Matrix example__
-
-```r
+```{r, fig.path = "inst/images" ,fig.height=5,fig.width=5}
 library(NEONDiversity)
-emend <- as.data.frame(read.csv("http://www.jennajacobs.org/R/EMEND.csv", row.names = 1))
+emend <- as.data.frame(read.csv("http://www.jennajacobs.org/R/EMEND.csv", row.names=1))
 emend_rare <- indiv_rare(as.matrix(emend))
 
 ### Plot results
-plot(x = unlist(lapply(emend_rare, length)), unlist(lapply(emend_rare, max)), 
-    ylim = c(0, max(unlist(emend_rare))), xlim = c(0, max(unlist(lapply(emend_rare, 
-        length)))), ylab = "Species", xlab = "Individuals")
-for (i in 1:length(emend_rare)) {
-    lines(emend_rare[[i]])
+plot(x = unlist(lapply(emend_rare,length)),unlist(lapply(emend_rare,max)),ylim=c(0,max(unlist(emend_rare))),xlim=c(0,max(unlist(lapply(emend_rare,length)))), ylab = "Species", xlab ="Individuals")
+for(i in 1:length(emend_rare)){
+lines(emend_rare[[i]])
 }
+
 ```
-
-![plot of chunk unnamed-chunk-1](inst/imagesunnamed-chunk-1.png) 
-
 

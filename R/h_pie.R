@@ -28,6 +28,11 @@ h_pie <- function(sp_list){
   
 }
 
+#' Calculate PIE
+#' @description Calculates the actual value of pie
+#' @param vec a vector of species abundances
+#' @return a value for PIE
+
 pie_calc <- function(vec) {
   
   N <- sum(vec)

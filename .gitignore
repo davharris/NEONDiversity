@@ -2,4 +2,5 @@
 .Rhistory
 .RData
 NEONDiversity.Rproj
-
+.Rbuildignore
+make.R
