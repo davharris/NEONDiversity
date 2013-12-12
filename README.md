@@ -8,6 +8,7 @@ Currently there are two algorithms implemented
 
 * Hurlbert's PIE
 * Individual based rarefaction
+* Chao1 estimator
 
 ### Quickstart
 
