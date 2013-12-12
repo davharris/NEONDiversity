@@ -11,3 +11,7 @@ Roxygen: list(wrap = FALSE)
 Collate:
     'h_pie.R'
     'indiv_rare.R'
+    'chao1.R'
+    'costaRicaTrees.R'
+    'work.R'
+LazyData: True

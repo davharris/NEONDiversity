@@ -2,11 +2,14 @@
 \alias{indiv_rare}
 \title{Individual base rarefaction}
 \usage{
-  indiv_rare(smat)
+  indiv_rare(smat, extrap = NULL)
 }
 \arguments{
   \item{smat}{a vector of species abundances or a site by
   species matrix}
+
+  \item{extrap}{the number of individuals to extrapolate
+  out to}
 }
 \value{
   a vector of interpolated and extrapolated values if a
@@ -18,25 +21,28 @@
   Colwell et al. 2012 (doi: 10.1093/jpe/rtr044), allows for
   both interpolation and extrapolation
 }
+\details{
+  If you extrapolate too far the algorithm results may not
+  make much sense.  Currently this method uses just the
+  basic Chao1 estimatory, but eventually will include the
+  ACE estimator. Just one value is accepted here, it will
+  extend all samples in a matrix out to this common end
+  point for comparison sake.
+}
 \examples{
 \dontrun{
 ## Data from Colwell 2012 table 4
-ni <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 16, 18, 19, 20, 25, 38, 39, 40, 46, 52, 55)
-count <- c(46, 30, 16, 12, 6, 5, 3, 4, 5, 4, 1, 3, 1, 1, 1, 1, 4, 3, 1, 1, 1, 1, 1, 1)
-LEP_cost_og <- vector()
-for(i in 1:length(ni)){
- LEP_cost_og <- c(LEP_cost_og,rep(ni[i],count[i]))}
-
-LEPrare <- indiv_rare(LEP_cost_og)
+data(costaRicaTrees)
+LEPrare <- indiv_rare(old_growth)
 plot(LEPrare, type='l', xlab="Individuals",ylab="Species")
 
-## Matrix example
-emend <- as.data.frame(read.csv("http://www.jennajacobs.org/R/EMEND.csv", row.names=1))
-emend_rare <- indiv_rare(as.matrix(emend))
+## Matrix example with data from Work et al 2010
+data(work)
+work_rare <- indiv_rare(as.matrix(work))
 ### Plot results
-plot(x = unlist(lapply(emend_rare,length)),unlist(lapply(emend_rare,max)),ylim=c(0,max(unlist(emend_rare))),xlim=c(0,max(unlist(lapply(emend_rare,length)))), ylab = "Species", xlab ="Individuals")
-for(i in 1:length(emend_rare)){
-lines(emend_rare[[i]])
+plot(x = unlist(lapply(work_rare,length)),unlist(lapply(work_rare,max)),ylim=c(0,max(unlist(work_rare))),xlim=c(0,max(unlist(lapply(work_rare,length)))), ylab = "Species", xlab ="Individuals")
+for(i in 1:length(work_rare)){
+lines(work_rare[[i]])
 }
 
 }
