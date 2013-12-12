@@ -37,4 +37,9 @@ h_pie(fake_dat)
 
 }
 }
+\references{
+  Hurlbert, S.H. 1971. The nonconcept of species diversity:
+  a critique and alternative parameters. Ecology 52:
+  577-585.
+}
 
