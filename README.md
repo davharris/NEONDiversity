@@ -27,15 +27,15 @@ __Matrix example__
 
 ```r
 library(NEONDiversity)
-emend <- as.data.frame(read.csv("http://www.jennajacobs.org/R/EMEND.csv", row.names = 1))
-emend_rare <- indiv_rare(as.matrix(emend))
+data(work)
+work_rare <- indiv_rare(as.matrix(work))
 
 ### Plot results
-plot(x = unlist(lapply(emend_rare, length)), unlist(lapply(emend_rare, max)), 
-    ylim = c(0, max(unlist(emend_rare))), xlim = c(0, max(unlist(lapply(emend_rare, 
+plot(x = unlist(lapply(work_rare, length)), unlist(lapply(work_rare, max)), 
+    ylim = c(0, max(unlist(work_rare))), xlim = c(0, max(unlist(lapply(work_rare, 
         length)))), ylab = "Species", xlab = "Individuals")
-for (i in 1:length(emend_rare)) {
-    lines(emend_rare[[i]])
+for (i in 1:length(work_rare)) {
+    lines(work_rare[[i]])
 }
 ```
 
